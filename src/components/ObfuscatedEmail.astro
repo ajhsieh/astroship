@@ -1,0 +1,16 @@
+---
+export interface Props {
+  user: string; // e.g. "hello"
+  domain: string; // e.g. "kicstartpartners"
+  tld: string; // e.g. "com"
+  label?: string; // optional CTA label; empty string renders only email
+}
+
+const { user, domain, tld, label = "Email me" } = Astro.props;
+const obf = `${user} [at] ${domain} [dot] ${tld}`;
+const displayText = label?.trim() ? `${label}: ${obf}` : obf;
+---
+
+<span id="obf-email" class="inline-block text-slate-800 font-medium tracking-wide">
+  {displayText}
+</span>

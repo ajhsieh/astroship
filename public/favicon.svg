@@ -1,13 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-  <path fill="#000" d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"/>
-  <path fill="url(#gradient)" d="M18 28a7.63 7.63 0 0 1-5-2c-1.4 2.1-.35 4.35.6 5.55.14.17.41.07.47-.15.44-1.8 2.93-1.22 2.93.6 0 2.28.87 3.4 1.72 3.81.34.16.59-.2.49-.56-.31-1.05-.29-2.46 1.29-3.25 3-1.5 3.17-4.83 2.5-6-.67.67-2.6 2-5 2Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" role="img" aria-label="KICstart petals favicon">
   <defs>
-    <linearGradient id="gradient" x1="16" x2="16" y1="32" y2="24" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    <!-- Reuse brand gradients at favicon scale -->
+    <linearGradient id="fg-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C8AE3"/>
+      <stop offset="100%" stop-color="#8175D4"/>
     </linearGradient>
+    <linearGradient id="fg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#95D4EC"/>
+      <stop offset="100%" stop-color="#79C5E4"/>
+    </linearGradient>
+    <linearGradient id="fg-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7B7C8"/>
+      <stop offset="100%" stop-color="#F2A5B7"/>
+    </linearGradient>
+    <!-- Base teardrop path similar to the logo (scaled later) -->
+    <path id="p" d="M0,-110 C56,-110 84,-64 70,-22 C55,22 19,50 0,70 C-19,50 -55,22 -70,-22 C-84,-64 -56,-110 0,-110 Z"/>
   </defs>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
+
+  <!-- Center group; scale the large path down to favicon size -->
+  <g transform="translate(18 17) scale(0.092)">
+    <use href="#p" fill="url(#fg-purple)" transform="translate(-105,50) rotate(-32) scale(0.95)"/>
+    <use href="#p" fill="url(#fg-blue)" transform="translate(0,-15) scale(0.86,0.9)"/>
+    <use href="#p" fill="url(#fg-pink)" transform="translate(110,60) rotate(24) scale(0.92)"/>
+  </g>
 </svg>
