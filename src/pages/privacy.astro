@@ -1,0 +1,61 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail.astro";
+---
+
+<Layout title="Privacy Policy | KICstart Partners" minimal>
+  <main class="policy">
+    <article class="policy-card">
+      <a href="/"><img src="/kicstart-logo.svg" alt="KICstart Partners logo" class="policy-logo" width="96" height="96" /></a>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated October 16, 2026</p>
+
+      <p>
+        This policy covers the private Google API apps that KICstart Partners runs for its own internal
+        and household use, such as calendar and spreadsheet integrations for our home automation and internal
+        tools. These apps are not offered to the public, and only our own Google accounts sign in to them.
+      </p>
+
+      <h2>What the apps access</h2>
+      <p>
+        Only the Google Calendar and Google Sheets data of the accounts that sign in, and only to show or
+        update that data in our own systems.
+      </p>
+
+      <h2>Where data is kept</h2>
+      <p>Access tokens and any copied data stay on computers and servers we control.</p>
+
+      <h2>Sharing</h2>
+      <p>
+        We do not sell, share, or transfer Google user data to anyone. Our use of information received from
+        Google APIs follows the Google API Services User Data Policy, including its Limited Use requirements.
+      </p>
+
+      <h2>Removing access</h2>
+      <p>You can revoke an app's access at any time at myaccount.google.com/permissions.</p>
+
+      <h2>Contact</h2>
+      <p><ObfuscatedEmail user="sandy" domain="kicstartpartners" tld="com" label="" /></p>
+    </article>
+  </main>
+  <style>
+    :global(body) {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "InterVariable", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #f8faff 0%, #e8f0ff 65%, #dfe4f6 100%);
+      color: #1b2431;
+    }
+    .policy { min-height: 100vh; display: flex; justify-content: center; padding: 3rem 1.25rem; box-sizing: border-box; }
+    .policy-card {
+      max-width: 680px; width: 100%; padding: 2.5rem 3rem; border-radius: 32px;
+      background: rgba(255, 255, 255, 0.9); box-shadow: 0 20px 60px rgba(27, 36, 49, 0.16); line-height: 1.6;
+    }
+    .policy-logo { display: block; margin: 0 auto 1rem; }
+    h1 { font-size: 1.9rem; margin: 0; text-align: center; }
+    .updated { text-align: center; color: #5b6576; margin-top: 0.25rem; }
+    h2 { font-size: 1.1rem; margin: 1.6rem 0 0.3rem; }
+    p { margin: 0.4rem 0; }
+    @media (max-width: 600px) { .policy-card { padding: 2rem 1.5rem; border-radius: 24px; } }
+  </style>
+</Layout>
